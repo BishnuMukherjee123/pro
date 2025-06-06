@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "VI2gV400msoc1XFg2",
+        });
+      })();
+    </script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-xl font-bold">My Portfolio</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="#about" class="hover:text-blue-600">About</a></li>
+            <li>
+              <a href="#projects" class="hover:text-blue-600">Projects</a>
+            </li>
+            <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 bg-blue-50" id="home">
+      <div
+        class="justify-self-center rounded-full h-70 w-70 bg-[url('pic.jpg')] bg-cover align-middle"
+      ></div>
+      <h2 class="text-4xl font-bold mb-4">Hello, I'm Bishnu</h2>
+      <p class="text-lg mb-6">A passionate Web Developer</p>
+      <a
+        href="#projects"
+        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+        >View Projects</a
+      >
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 container mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-4">About Me</h3>
+      <p class="text-lg leading-relaxed">
+        I'm a final-year Computer Science student at BCREC with a strong
+        interest in full-stack development. I enjoy building responsive and
+        user-friendly web applications.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-8 text-center">My Projects</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card -->
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h4 class="text-xl font-semibold mb-2">Project One</h4>
+            <p class="mb-4">A short description of the project goes here.</p>
+            <a href="#" class="text-blue-600 hover:underline">View Code</a>
+          </div>
+          <!-- Repeat Project Cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contactForm" class="py-20 container mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-4">Contact Me</h3>
+      <form class="max-w-lg mx-auto space-y-4" id="contactForm">
+        <input
+          id="name"
+          type="text"
+          name="from_name"
+          placeholder="Name"
+          class="w-full p-3 border border-gray-300 rounded"
+          required
+        />
+        <input
+          id="email"
+          type="email"
+          name="from_email"
+          placeholder="Email"
+          class="w-full p-3 border border-gray-300 rounded"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Message"
+          class="w-full p-3 border border-gray-300 rounded"
+          rows="5"
+          required
+        ></textarea>
+        <button
+          onclick="sendMail()"
+          type="submit"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-6 shadow-inner">
+      <p>&copy; 2025 Bishnu Mukherjee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
